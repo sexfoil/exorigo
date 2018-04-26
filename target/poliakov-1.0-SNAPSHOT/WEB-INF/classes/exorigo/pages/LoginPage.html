@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>AppCRUD test Poliakov</title>
+		
+	</head>
+	<body>
+		<wicket:link>
+			Click here to back to home page.
+			<button wicket:id="homePage">Home Page</button>
+			
+		</wicket:link>
+		<BR>
+	   	<form id="loginForm" method="post" wicket:id="loginForm">
+        <p wicket:id="loginStatus" />
+        <fieldset>
+            <span>Login: </span><input type="text" wicket:id="username" />
+        	<BR>
+            <span>Password: </span><input type="password" wicket:id="password" /> 
+            <BR>
+            <p>
+                <input type="submit" name="Login" value="Login"/>
+            </p>
+        </fieldset>    
+  		</form>  
+	</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>AppCRUD test Poliakov</title>
+		
+	</head>
+	
+	<body>
+		
+		<br>
+		
+		<fieldset>			
+			<form id="loginForm" method="post" wicket:id="loginForm">
+				<p wicket:id="loginStatus" />
+        		<table>
+        			<tr>
+        				<td align="right"><span wicket:id="loginLbl"></span></td><td><input type="text" wicket:id="username" value="default"/></td>
+        			</tr>
+        			<tr>
+        				<td align="right"><span wicket:id="passLbl"></span></td><td><input type="password" wicket:id="password" value="default"/></td>
+        			</tr>
+        			<tr>
+        				<td align="right" colspan="2">
+        					<input type="submit" wicket:id="logIn" name="Login" value="LogIn"/>
+        					<button wicket:id="logOut">LogOut</button>       					    					
+        				</td>
+        			</tr>        			
+        		</table>
+  			</form>		
+		</fieldset>
+		
+		<br>
+		
+		<fieldset>
+			<table>
+				<tr>
+					<td align="right">
+						<form method="post" wicket:id="searchForm">
+    						<input type="text" wicket:id="searchName" placeholder="Searching..."/>
+							<button type="submit" wicket:id="findUser">Search</button>
+							<span wicket:id="searchStatus">RESULT SEARCHING TEXT HERE...</span>
+    					</form>					
+					</td>
+					<td align="right">
+						
+					</td>								
+				</tr>
+			</table>
+		</fieldset>			
+	
+		<br>
+		
+		<table width=100% border="1">
+			<tr>
+    			<td align="center" colspan="4"><strong>List of users</strong></td>    			
+  			</tr>
+		
+			<tr align="center">
+				<th width=4%>Number</th>
+				<th width=32%>Name</th>
+				<th width=32%>Last name</th>
+				<th width=32%>Login</th>
+			</tr>
+  			<tr wicket:id="userList">
+  				<td><span wicket:id="num"></span></td>
+    			<td><span wicket:id="firstName"></span></td>
+    			<td><span wicket:id="lastName"></span></td>
+    			<td><span wicket:id="login"></span></td>    			
+  			</tr>
+		</table>
+		
+		<br>
+		
+		<form id="actionForm" method="post" wicket:id="actionForm">
+        	<p wicket:id="titleMessage" />
+        	<p wicket:id="actionMessage" />
+        	<fieldset>
+        	    <table>
+        			<tr>
+        				<td align="right"><span>Last name: </span></td><td><input type="text" wicket:id="lastName" /></td>
+        			</tr>
+        			<tr>
+        				<td align="right"><span>First name: </span></td><td><input type="text" wicket:id="firstName" /></td>
+        			</tr>
+        			<tr>
+        				<td align="right"><span>Login: </span></td><td><input type="text" wicket:id="login" /></td>
+        			</tr>
+        			<tr>
+        				<td align="right"><span>Password: </span></td><td><input type="password" wicket:id="password" /></td>
+        			</tr>
+        			
+        			<tr>
+        				<td align="right" colspan="2">
+             				<input type="submit" wicket:id="createUser" name="create" value="CREATE"/>
+            				<input type="submit" wicket:id="updateUser" name="update" value="UPDATE"/>
+            				<input type="submit" wicket:id="deleteUser" name="delete" value="DELETE"/>        				
+        				</td>
+        			</tr>        			
+        		</table>
+        	</fieldset>    
+  		</form>  		
+		
+	</body>
+</html>
