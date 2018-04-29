@@ -18,10 +18,10 @@ public class DBworker implements Serializable{
 	private static final long serialVersionUID = 9999L;
 	
 	private static final String BD_DRIVER = "com.mysql.cj.jdbc.Driver";	
-	private static final String CONNECTION_URL = "jdbc:mysql://localhost/exorigo?serverTimezone=UTC";	
+	private static final String CONNECTION_URL = "jdbc:mysql://localhost/exorigoupos?serverTimezone=UTC";	
 	private static final String BD_USER = "root";
 	private static final String BD_PASS = "";
-	private static final String TABLE_NAME = "test";
+	private static final String TABLE_NAME = "users";
 	
 	Connection connection = null;
 	Statement statement = null;
