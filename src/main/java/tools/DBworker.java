@@ -233,7 +233,7 @@ public class DBworker implements Serializable{
      * @return true if User with such 'login' exist then false
      */
     public boolean isUserExist(String login) {
-        StringBuilder query = new StringBuilder("SELECT * FROM  ");
+        StringBuilder query = new StringBuilder("SELECT * FROM ");
         query.append(TABLE_NAME);
         query.append(" WHERE login = '");
         query.append(login).append("';");
@@ -241,9 +241,10 @@ public class DBworker implements Serializable{
         boolean isExist = false;
         
         try {
-        	resultSet = statement.executeQuery(query.toString());
+        	resultSet = statement.executeQuery(query.toString());        	
         	resultSet.next();
-        	isExist = login.equals(resultSet.getString("login"));
+        	//System.out.println("*********************** ROW: " + resultSet.getRow());
+        	isExist = resultSet.getRow() > 0 && login.equals(resultSet.getString("login"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
